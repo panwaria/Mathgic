@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ProgressProvider } from './hooks/useProgress';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
@@ -11,7 +11,7 @@ import BadgesPage from './pages/BadgesPage';
 export default function App() {
   return (
     <ProgressProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
@@ -22,7 +22,7 @@ export default function App() {
             <Route path="/badges" element={<BadgesPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ProgressProvider>
   );
 }
