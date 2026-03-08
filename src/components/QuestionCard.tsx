@@ -1,4 +1,5 @@
 import { Question } from '../types';
+import { illustrationMap } from '../data/illustrations';
 
 const labels = ['A', 'B', 'C', 'D', 'E'];
 
@@ -39,9 +40,16 @@ export default function QuestionCard({
     return 'bg-white border-cream-dark opacity-50';
   };
 
+  const Illustration = illustrationMap[question.id];
+
   return (
     <div className="animate-slide-up">
       <div className="bg-white rounded-2xl p-6 shadow-md mb-6">
+        {Illustration && (
+          <div className="mb-4 flex justify-center">
+            <Illustration />
+          </div>
+        )}
         <p className="text-xl md:text-2xl font-bold text-center leading-relaxed mb-2">
           {question.text}
         </p>
