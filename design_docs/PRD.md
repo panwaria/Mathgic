@@ -208,7 +208,6 @@ interface Question {
   explanation: string;        // Kid-friendly explanation
   category: Category;
   difficulty: Difficulty;
-  imageUrl?: string;          // Optional illustration
   source: QuestionSource;
 }
 
@@ -296,7 +295,7 @@ All questions (hardcoded and AI-generated) must follow these rules:
 1. **Language**: Simple vocabulary appropriate for a 7-year-old
 2. **Length**: Question text under 3 sentences; each choice under 10 words
 3. **Format**: Always 5 choices (A-E) matching real Math Kangaroo format
-4. **Visuals**: Describe visual elements in text (shapes, patterns, arrangements)
+4. **Visuals**: Each question has an inline SVG illustration rendered above the question text. Illustrations use the app color palette and simple shapes appropriate for 7-year-olds
 5. **Topics by Difficulty**:
    - **3-point (Easy)**: Counting, basic shapes, simple addition/subtraction, color patterns
    - **4-point (Medium)**: Multi-step arithmetic, shape combinations, sequence completion, spatial rotation
@@ -320,7 +319,7 @@ All questions (hardcoded and AI-generated) must follow these rules:
 - [ ] User accounts with cloud sync (Supabase)
 - [ ] Parent dashboard with email reports
 - [ ] Sound effects and voice reading of questions
-- [ ] Image-based questions (actual geometric figures)
+- [x] ~~Image-based questions~~ — Inline SVG illustrations added for all 51 bank questions
 - [ ] Multiplayer/challenge mode with friends
 - [ ] Support for other Math Kangaroo grade levels (3-4, 5-6)
 - [ ] Print-friendly practice sheets

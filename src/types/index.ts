@@ -10,7 +10,6 @@ export interface Question {
   explanation: string;
   category: Category;
   difficulty: Difficulty;
-  imageUrl?: string;
   source: QuestionSource;
 }
 
